@@ -82,18 +82,11 @@ class UserProfile : AppCompatActivity(), DataLoadStatus {
 
         //for update note into user database
         binding.save.setOnClickListener {
-            if(binding.note.text.isEmpty()){
-                Toast.makeText(applicationContext,"please enter note", Toast.LENGTH_SHORT).show()
-            }else{
+            if(!binding.noteDisplay.text.isEmpty() && binding.noteDisplay.text.length > 1){
                 val userDetail = oneuserDetail_obj?.let { it1 ->
                     oneuserDetail_obj?.id?.let { it2 ->
                         oneuserDetail_obj?.bitmap?.let { it3 ->
-                            userDetail(
-                                id = it2,
-                                bitmap = it3,
-                                login = it1?.login,
-                                note = true
-                            )
+                            userDetail(id = it2, bitmap = it3, login = it1?.login, note = true)
                         }
                     }
                 }
@@ -107,6 +100,8 @@ class UserProfile : AppCompatActivity(), DataLoadStatus {
                     oneuserDetail_obj?.let { it1 -> RoomDataBaseUse.update(this@UserProfile, it1) }
                     RoomDataBaseUse.update(this@UserProfile, userDetail)
                 }
+            }else{
+                Toast.makeText(applicationContext,"please enter note", Toast.LENGTH_SHORT).show()
             }
         }
     }
