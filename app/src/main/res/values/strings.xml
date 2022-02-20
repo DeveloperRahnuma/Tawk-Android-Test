@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <!--    for search bar -->
+    <string name="searchh"> Search with name display in list</string>
+
+    <!--  for user profile view -->
+    <string name="username"> User name</string>
+    <string name="follower"> Follower</string>
+    <string name="following"> Following</string>
+
+    <!--  Internet not Available Diologe -->
+    <string name="internet_title"> Internet Not Available</string>
+    <string name="internet_msg"> Data cannot be load at the moment becouse Internet Not Available</string>
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="@dimen/imageWidth"
+        android:layout_marginStart="@dimen/marginStandard"
+        android:layout_marginEnd="@dimen/marginStandard"
+        android:background="@color/shimmer_item_color"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/paddingStandard"
+        android:layout_marginEnd="@dimen/paddingStandard"
+        android:background="@color/shimmer_item_color"
+        android:textSize="@dimen/textSizeHeading"
+        app:layout_constraintBottom_toTopOf="@id/desTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv"
+        app:layout_constraintTop_toTopOf="@id/iv" />
+
+    <TextView
+        android:id="@+id/desTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/shimmer_item_color"
+        android:lines="2"
+        android:textSize="@dimen/textSizeDescription"
+        app:layout_constraintBottom_toBottomOf="@id/iv"
+        app:layout_constraintEnd_toEndOf="@id/titleTv"
+        app:layout_constraintStart_toStartOf="@id/titleTv"
+        app:layout_constraintTop_toBottomOf="@id/titleTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
